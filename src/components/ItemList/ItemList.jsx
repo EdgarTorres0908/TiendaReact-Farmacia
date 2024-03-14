@@ -1,9 +1,11 @@
+import Item from "../Item/Item"
+
 const ItemList = ({ products }) => {
     return ( 
         <section>
             {
                 products.map(products => {
-                    return <p key={products.id}>{products.name}</p>
+                    return <Item key={products.id} { ...products}/>
                 })
             }
         </section>

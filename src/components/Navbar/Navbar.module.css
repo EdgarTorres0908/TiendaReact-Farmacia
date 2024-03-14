@@ -20,6 +20,10 @@ header {
   a:hover {
     text-decoration: underline;
   }
-  
-  
-  
+
+  .cart-button {
+    border: none;
+    background: none;
+    color: white;
+    cursor:pointer;
+}

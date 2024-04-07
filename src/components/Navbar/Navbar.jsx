@@ -17,7 +17,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <CartWidget />
+      <CartWidget className={styles.cartButton} />
     </header>
   );
 };

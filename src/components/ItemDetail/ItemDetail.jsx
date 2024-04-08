@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContext';
+import './ItemDetail.module.css';
 
 const InputCount = ({ onAdd, stock, initial = 1 }) => {
     const [count, setCount] = useState(initial);
@@ -53,14 +54,12 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
 
     const handleOnAdd = (count) => {
         console.log('Producto a agregar:', { id, name, price }, 'Cantidad:', count);
-        addItem({ id, name, price }, count); // Pasar solo la cantidad al llamar a addItem
-        setQuantity(count); // Actualizar la cantidad en el estado local
+        addItem({ id, name, price }, count); 
+        setQuantity(count); 
     };
 
-    console.log('Cantidad actual en el estado local:', quantity);
-
     return (
-        <article>
+        <article className="item-detail-container">
             <button onClick={() => setInputType(inputType === 'input' ? 'button' : 'input')}>
                 Cambiar contador
             </button>
@@ -68,20 +67,18 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
                 <h2>{name}</h2>
             </header>
             <picture>
-                <img src={img} alt={name} style={{ width: 100 }}/>
+                <img src={img} alt={name} className="item-detail-image"/>
             </picture>
             <section>
-                <p>Categoría: {category}</p>
-                <p>Descripción: {description}</p>
-                <p>Precio: {price}</p>
+                <p><strong>Categoría:</strong> {category}</p>
+                <p><strong>Descripción:</strong> {description}</p>
+                <p><strong>Precio:</strong> ${price}</p>
             </section>
             <footer>
                 {quantity === 0 ? (
                     <ItemCount onAdd={handleOnAdd} stock={stock}/>
                 ) : (
-                    <>
-                        <Link to='/carrito'>Finalizar compra</Link>
-                    </>
+                    <Link to='/cart'>Ir al carrito</Link>
                 )}
             </footer>
         </article>

@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContext';
+import styles from './Cartwidget.module.css';
 
 const CartWidget = () => {
     const { cart } = useContext(CartContext);
     let totalItems = 0;
 
-    // Calcular el total de elementos en el carrito
     for (const item of cart) {
         totalItems += item.quantity;
     }
 
     return (
-        <div>
+        <div className='img cartCount'>
             <Link to="/cart">Carro ({totalItems})</Link>
         </div>
     );

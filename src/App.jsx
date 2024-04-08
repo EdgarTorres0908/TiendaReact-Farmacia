@@ -12,7 +12,7 @@ const App = () => {
             <CartProvider>
                 <Navbar />
                 <Routes>
-                    <Route path="/" element={<ItemListContainer greeting="Bienvenidos" />} />
+                    <Route path="/" element={<ItemListContainer greeting="Bienvenidos a tu Farmacia" />} />
                     <Route path="/category/:categoryId" element={<ItemListContainer greeting="Listado de productos filtrados" />} />
                     <Route path="/item/:itemId" element={<ItemDetailContainer />} />
                     <Route path="/cart" element={<CartView />} />

@@ -3,7 +3,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #007bff; 
+    background-color: #1c77d8; 
     color: #fff; 
   }
   
@@ -12,9 +12,10 @@ header {
     gap: 1.8rem;
   }
   
-  a {
+  header a {
     text-decoration: none;
     color: #fff; 
+    margin-right: 40px;
   }
   
   a:hover {
@@ -26,4 +27,9 @@ header {
     background: none;
     color: white;
     cursor:pointer;
+}
+
+.cartIcon {
+  margin-left: 50px; /* Ajusta el valor según sea necesario */
+  padding: 0;
 }

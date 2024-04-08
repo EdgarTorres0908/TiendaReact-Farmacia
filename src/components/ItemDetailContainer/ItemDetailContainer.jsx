@@ -22,9 +22,7 @@ const ItemDetailContainer = () => {
                 console.error("Error loading product detail:", error);
             });
 
-         //Alternativamente, si la función getProductById(itemId) carga los detalles del producto desde un endpoint,
-         //puedes usarla en lugar de consultar Firestore:
-        
+               
          getProductById(itemId)
              .then(response => {
                  setProduct(response);
@@ -35,7 +33,7 @@ const ItemDetailContainer = () => {
     }, [itemId]);
 
     return (
-        <div style={{ background: 'pink' }}>
+        <div style={{ background: 'white' }}>
             <h1>Detalle de producto</h1>
             <ItemDetail {...product} />
         </div>

@@ -36,22 +36,4 @@
 ```sh
 git clone https://github.com/EdgarTorres0908/TiendaReact-Farmacia.git
 cd TiendaReact-Farmacia
-
-### **Paso 2: Instalar dependencias**
-npm install
-
-### **Paso 3: Configurar variables de entorno**
-Crea un archivo .env.local en la raíz del proyecto y agrega las credenciales de Firebase:
-
-
-VITE_API_KEY=TU_API_KEY
-VITE_AUTH_DOMAIN=TU_AUTH_DOMAIN
-VITE_PROJECT_ID=TU_PROJECT_ID
-VITE_STORAGE_BUCKET=TU_STORAGE_BUCKET
-VITE_MESSAGING_SENDER_ID=TU_MESSAGING_SENDER_ID
-VITE_APP_ID=TU_APP_ID
-** Reemplaza TU_API_KEY y demás valores con los de tu Firebase.**
-
-**Paso 4: Ejecutar el servidor**
-npm run dev
 Abre la aplicación en http://localhost:5173/
